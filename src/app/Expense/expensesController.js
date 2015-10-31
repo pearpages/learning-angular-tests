@@ -2,9 +2,9 @@
 	'use strict'
 
 	angular.module('app')
-	.controller('ExpensesController', [ExpensesController]);
+	.controller('ExpensesController', ['expensesDataService',ExpensesController]);
 
-	function ExpensesController(){
+	function ExpensesController(expensesDataService){
 
 		var vm = this;
 
@@ -14,11 +14,7 @@
 		activate();
 
 		function activate(){
-			return vm.expenseItems = [
-				{title: 'Taxi', description: 'To airport', amount: 89.95},
-				{title: 'Lunch', description: 'At airport', amount:15.40},
-				{title: 'Coffee', description: 'Starbucks', amount:4.93}
-			];
+			return vm.expenseItems = expensesDataService.getExpenses();
 		}
 	}
 })();
