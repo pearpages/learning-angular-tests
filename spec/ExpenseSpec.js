@@ -2,9 +2,9 @@ describe("Expense objects", function (){
 
 	var expense, expnseItem;
 
-	beforeach(function (){
-		var expenseItem = new ExpenseItem(100);
-		var expense = new Expense(expenseItem);
+	beforeEach(function (){
+		expenseItem = new ExpenseItem(100);
+		expense = new Expense(expenseItem);
 	});
 
 	it("should be of type ExpenseItem", function (){

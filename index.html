@@ -1,0 +1,24 @@
+<html ng-app="app">
+	<head>
+		<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+		<style>
+			body{
+				margin-top:50px;
+			}
+		</style>
+	</head>
+	<body>
+		<div ng-include="'src/app/layout/topNav.html'"></div>
+
+		<div ng-view></div>
+		
+		<!-- vendor files -->
+		<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+		<script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+
+		<!-- My files -->
+		<script type="text/javascript" src="src/app/app.js"></script>
+		<script type="text/javascript" src="src/app/Expense/Expense.js"></script>
+		<script type="text/javascript" src="src/app/Expense/ExpenseItem.js"></script>
+	</body>
+</html>
