@@ -6,7 +6,8 @@
 
 		function expensesDataService($http){
 			var service = {
-				getExpenses: getExpenses
+				getExpenses: getExpenses,
+				persistExpenses: persistExpenses
 			}
 
 			return service;
@@ -18,5 +19,20 @@
 					new ExpenseItem('Coffee', 'Starbucks', 4.93)
 				];
 			};
+
+			function reportExpenses(){
+				//some work
+				
+
+			}
+
+			function persistExpenses(reportExpenses){
+				// do some work to persist
+				
+				var success = true;
+				if(success){
+					reportExpenses();
+				}
+			}
 		}
 })();
